@@ -1,15 +1,6 @@
-/* import { readdir } from 'node:fs/promises'; */
-
 const fs = require('fs');
 const path = require('path');
 const pathToFoler = path.join(__dirname, 'secret-folder');
-
-/* try {
-  const files = await readdir(path);
-  for (const file of files) console.log(file);
-} catch (err) {
-  console.error(err);
-} */
 
 fs.readdir(pathToFoler, { withFileTypes: true }, (err, files) => {
   if (err) console.log(err.message);
