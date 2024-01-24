@@ -15,7 +15,7 @@ fs.readdir(pathToFoler, { withFileTypes: true }, (err, files) => {
         if (err) {
           console.log(err.message);
         } else {
-          console.log(`${fileName} - ${fileExt} - ${stats.size}mb`);
+          console.log(`${fileName} - ${fileExt} - ${stats.size}b`);
         }
       });
     }
